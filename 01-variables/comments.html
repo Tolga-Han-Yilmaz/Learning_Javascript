@@ -21,6 +21,13 @@
         c = a * b;
         document.getElementById("demo3").value = c;
       }
+      function division(){
+        var d,e,f;
+        d = Number(document.getElementById("demo4").value);
+        e = Number(document.getElementById("demo5").value);
+        f = d / e ;
+        document.getElementById("demo6").value = f ;
+      }
     </script>
   </head>
   <body>
@@ -35,5 +42,10 @@
     Enter the Second number : <input id="demo2" /><br /><br />
     <button onclick="multiply()">multiply</button>
     <input id="demo3" />
+    <br><hr><br>
+    Enter the First number : <input id="demo4" /><br /><br />
+    Enter the Second number : <input id="demo5" /><br /><br />
+    <button onclick="division()">multiply</button>
+    <input id="demo6" />
   </body>
 </html>
