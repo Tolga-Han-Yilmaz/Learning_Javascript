@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Javascript const</h2>
+    <p>
+      Constant Objects and Arrays The keyword const is a little misleading. It
+      does not define a constant value. It defines a constant reference to a
+      value. Because of this you can NOT: Reassign a constant value Reassign a
+      constant array Reassign a constant object But you CAN: Change the elements
+      of constant array Change the properties of constant object
+    </p>
+    <p id="demo1"></p>
+    <br /><br />
+    <hr />
+    <br /><br />
+    <p id="demo2"></p>
+    <script>
+      // Create an Array:
+      const cars = ["Saab", "Volvo", "BMW"];
+      // Change an element:
+      cars[0] = "Toyota";
+      // Add an element:
+      cars.push("Audi");
+      // Display the Array:
+      document.getElementById("demo1").innerHTML = cars;
+      /************************************/
+      // create an object
+      const car = { type: "Fiat", model: "500", color: "white" };
+      // change a property
+      car.color = "red";
+      // add a property
+      car.owner = "Tolga";
+      // Display the property
+      document.getElementById("demo2").innerHTML = car.color;
+      console.log(car);
+
+      var yoo = 5;
+
+      document.write((yoo >>= 5)); // 001
+    </script>
+  </body>
+</html>

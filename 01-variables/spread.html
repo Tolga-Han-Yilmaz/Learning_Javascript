@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // concat()
+      var arr = [1, 2, 3];
+      var arr2 = [4, 5];
+      arr = arr.concat(arr2);
+      console.log(arr); // [ 1, 2, 3, 4, 5 ]
+
+      // ...
+      var arr = [1, 2, 3];
+      var arr2 = [4, 5];
+      arr = [...arr, ...arr2];
+      console.log(arr); //[1, 2, 3, 4, 5]
+
+      // copy
+      var arr = ["a", "b", "c"];
+      var arr2 = arr;
+      console.log(arr2); // ['a', 'b', 'c']
+
+      // push
+      var arr = ["a", "b", "c"];
+      var arr2 = arr;
+      arr2.push("d");
+      console.log(arr2); // ['a', 'b', 'c', 'd']
+      console.log(arr); // ['a', 'b', 'c', 'd']
+      // orjinali bile değiştirdi
+
+      var arr = ["a", "b", "c"];
+      var arr2 = [...arr];
+      console.log(arr); // [ 'a', 'b', 'c' ]
+      arr2.push("d"); //inserting an element at the end of arr2
+      console.log(arr2); // [ 'a', 'b', 'c', 'd' ]
+      console.log(arr); // [ 'a', 'b', 'c' ]
+
+      // expand
+      var arr = ["a", "b", "c"];
+      var arr2 = [arr, "d", "e"];
+      console.log(arr2); // [["a", "b", "c"], 'd', 'e']
+
+      var arr = ["a", "b", "c"];
+      var arr2 = [...arr, "d", "e"];
+      console.log(arr2); // ['a', 'b', 'c', 'd', 'e']
+
+      // Math
+      console.log(Math.min(1, 2, -1, 3)); // -1
+      var arr = [1, 2, 3, -1];
+      console.log(Math.min(arr)); // NaN
+      var arr = [1, 2, 3, -1];
+      console.log(Math.min(...arr)); // -1
+
+      const user1 = {
+        name: "tolga",
+        age: 30,
+      };
+      const cloneUser = { ...user1 };
+      console.log(cloneUser); // {name: 'tolga', age: 30}
+
+      const user2 = {
+        name: "tolga",
+        age: 30,
+      };
+      const user3 = {
+        name: "derya",
+        location: "manisa",
+      };
+      const mergeUsers = { ...user2, ...user3 };
+      console.log(mergeUsers); // {name: 'derya', age: 30, location: 'manisa'}
+    </script>
+  </body>
+</html>

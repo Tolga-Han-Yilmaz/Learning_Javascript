@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <h2>Javascript in Body</h2>
+    <p id="demo"></p>
+    <p id="demo1">A paragraph</p>
+    <p id="demo2"></p>
+    <button type="button" onclick="myFunction1()">Try 1</button><br /><br />
+    <button onclick="window.print()">Print this page</button><br /><br />
+    <script>
+      document.getElementById("demo").innerHTML = "My First Javascript";
+      function myFunction1() {
+        document.getElementById("demo1").innerHTML = "Paragraph changed.";
+      }
+      document.getElementById("demo2").innerHTML = 3 * 4 * 5 + 6 / 2;
+      document.write(4 + 5);
+      document.writeln("<br>");
+
+      var Name = "Apple";
+      function myFunction2() {
+        var num = 45;
+        document.writeln(Name);
+        document.writeln("<br>" + num);
+      }
+      myFunction2();
+    </script>
+  </body>
+</html>
