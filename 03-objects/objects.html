@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Property Attributes Data properties in JavaScript have four attributes.
+      value: The property’s value. writable: When true, the property’s value can
+      be changed enumerable: When true, the property can be iterated over by
+      “for-in” enumeration. Otherwise, the property is said to be
+      non-enumerable. configurable:If false, attempts to delete the property,
+      change the property to be an access-or property, or change its attributes
+      (other than [[Value]], or changing [[Writable]] to false) will fail.
+    </p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="dem011"></p>
+    <p id="demo12"></p>
+    <script>
+      const car = { type: "Fiat", model: "500", color: "white" };
+      document.getElementById("demo1").innerHTML =
+        "The car type is " + car.type;
+      /************************/
+      let school = {
+        name: "Atatürk İÖO",
+        location: "Ankara",
+        established: "1920",
+        displayInfo: function () {
+          document.getElementById(
+            "demo2"
+          ).innerHTML = `${school.name} was established in ${school.established} at ${school["location"]} `;
+        },
+      };
+      school.displayInfo();
+      /************************/
+      let school1 = {
+        name: "Atatürk İÖO",
+        location: "Ankara",
+        established: "1920",
+        displayInfo1: function () {
+          document.getElementById("demo3").innerHTML = `${
+            school1.name[3]
+          } <br> ${school1.name.split()[0]}
+          <br> ${school1.name.split("")[0]}
+          <br> ${school1.name.split(" ")[0]}`;
+        },
+      };
+      school1.displayInfo1();
+      // hasOwnProperty cone in js
+      const object1 = new Object();
+      object1.property1 = 42;
+      document.getElementById("demo4").innerHTML =
+        object1.hasOwnProperty("property1");
+
+      // Create Objects
+      const school2 = new Object();
+      school2.name = "Harward University";
+      school2.location = "USA";
+      school2.established = 1945;
+      school2.displayInfo2 = function () {
+        document.getElementById(
+          "demo5"
+        ).innerHTML = `${school2.name} was established in ${school2.established} at ${school2.location} `;
+      };
+      school2.displayInfo2();
+
+      function Vehicle(name, maker) {
+        this.name = name;
+        this.maker = maker;
+      }
+      let car1 = new Vehicle("RAV4", "Toyota");
+      let car2 = new Vehicle("model3", "tesla");
+      document.getElementById("demo6").innerHTML = `${car1.name}  `;
+      const person1 = {
+        firstName: "Tolga Han",
+        lastName: "Yılmaz",
+        id: 1234,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo7").innerHTML = person1.fullName();
+      document.getElementById("demo8").innerHTML = person1.fullName;
+      /********************************/
+      let person2 = {
+        gender: "male",
+      };
+      var person3 = Object.create(person2);
+      person3.name = "Tolga";
+      person3.age = 45;
+      person3.nationality = "Turkey";
+      for (let key in person3) {
+        // console.log(key);
+        document.getElementById("demo9").innerHTML = key;
+      }
+    </script>
+  </body>
+</html>
