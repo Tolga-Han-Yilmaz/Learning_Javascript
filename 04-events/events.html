@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="dem011"></p>
+    <p id="demo12"></p>
+    <button onclick="document.getElementById('demo1').innerHTML=Date()">
+      Time</button
+    ><br /><br />
+    <button onclick="this.innerHTML=Date()">Time</button><br /><br />
+    <button onclick="displayDate()">Time</button><br /><br />
+    <button onclick="hiThere()">Click me</button>
+    <br /><br />
+    <input
+      id="bg"
+      onkeyup="changeBackground()"
+      placeholder="write something"
+      style="color: #fff"
+    />
+    <div
+      id="hover"
+      onmouseover="hov()"
+      style="background-color: black; height: 200px; width: 200px"
+    ></div>
+    <br /><br />
+    <input onchange="alert(this.value)" type="number" />
+    <br /><br />
+    <img
+      src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/GeeksforGeeksLogoHeader.png"
+      onload="alert('Image completely loaded')"
+    />
+    <script>
+      function displayDate() {
+        document.getElementById("demo2").innerHTML = Date();
+      }
+      /************************/
+      function hiThere() {
+        alert("Hello");
+      }
+      /************************/
+      var a = 0;
+      var b = 0;
+      var c = 0;
+      function changeBackground() {
+        var x = document.getElementById("bg");
+        x.style.backgroundColor = "rgb(" + a + ", " + b + ", " + c + ")";
+        a += 1;
+        b += a + 1;
+        c += b + 1;
+        if (a > 255) a = a - b;
+        if (b > 255) b = a;
+        if (c > 255) c = b;
+      }
+      /*********************************/
+      function hov() {
+        var e = document.getElementById("hover");
+        e.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
