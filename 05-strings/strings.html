@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+      let answer1 = "It's alright";
+      let answer2 = "He is called 'Tolga'";
+      let answer3 = 'He is called "Tolga"';
+
+      document.getElementById("demo1").innerHTML =
+        answer1 + "<br>" + answer2 + "<br>" + answer3;
+      // Escape Character  \
+      let text = 'We are the so-called "Vikings" from the north.';
+      document.getElementById("demo2").innerHTML = text;
+      /******************************/
+      let x = "Tolga"; // x is a string
+      let y = new String("Tolga"); // y is an object
+      let z = new String("Tolga"); // z is an object
+      document.getElementById("demo3").innerHTML = x == y; // true
+      document.getElementById("demo4").innerHTML = x === y; // false
+      document.getElementById("demo5").innerHTML = y == z; // false
+      document.getElementById("demo6").innerHTML = y === z; // false
+    </script>
+  </body>
+</html>
