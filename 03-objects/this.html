@@ -13,7 +13,7 @@
     
     <button onclick="this.style.display='none'">click to remove me</button>
     <script>
-      const person1 = {
+      var person1 = {
         firstName: "Tolga Han",
         lastName: "Yılmaz",
         id: 1234,
@@ -25,6 +25,41 @@
       /*****************/
       let x = this;
       document.getElementById("demo2").innerHTML = x;
+      /////////////////////////////////////
+      var person = {
+        firstName: "Tolga Han",
+        lastName: "Yılmaz",
+        id: 1234,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      console.log(person.fullName()); // Tolga Han Yılmaz
+      /////////////////////////////////////
+      var person1 = {
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      var person2 = {
+        firstName: "Tolga",
+        lastName: "Yılmaz",
+      };
+      console.log(person1.fullName.call(person2)); // Tolga Yılmaz
+      /////////////////////////////////////
+      var person = {
+        firstName: "Tolga Han",
+        lastName: "Yılmaz",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      var member = {
+        firstName: "Nazlı",
+        lastName: "Yılmaz",
+      };
+      var result = person.fullName.bind(member);
+      console.log(result()); // Nazlı Yılmaz
     </script>
   </body>
 </html>
