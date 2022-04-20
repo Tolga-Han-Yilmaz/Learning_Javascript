@@ -7,6 +7,117 @@
     <title>Document</title>
   </head>
   <body>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+      target="_blank"
+      >object</a
+    >
+    <h3>Managing Objects</h3>
+    <div class="w3-code notranslate jsHigh" style="position: relative">
+      <span class="jscolor" style="color: black"
+        ><span class="jsnumbercolor" style="color: red"> </span
+        ><span class="commentcolor" style="color: green"
+          >// Create object with an existing object as prototype<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black">create</span
+        >()<br /><br /><span class="jsnumbercolor" style="color: red"> </span
+        ><span class="commentcolor" style="color: green"
+          >// Adding or changing an object property<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black"
+          >defineProperty</span
+        >(object, property, descriptor)<br /><br /><span
+          class="jsnumbercolor"
+          style="color: red"
+        >
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Adding or changing object properties<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black"
+          >defineProperties</span
+        >(object, descriptors)<br /><br /><span
+          class="jsnumbercolor"
+          style="color: red"
+        >
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Accessing Properties<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black"
+          >getOwnPropertyDescriptor</span
+        >(object, property)<br /><br /><span
+          class="jsnumbercolor"
+          style="color: red"
+        >
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Returns all properties as an array<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black"
+          >getOwnPropertyNames</span
+        >(object)<br /><br /><span class="jsnumbercolor" style="color: red">
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Accessing the prototype<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black"
+          >getPrototypeOf</span
+        >(object)<br /><br /><span class="jsnumbercolor" style="color: red">
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Returns enumerable properties as an array<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black">keys</span
+        >(object)<br /><br /><span class="jsnumbercolor" style="color: red">
+        </span>
+      </span>
+      <div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div>
+    </div>
+    <h3>Protecting Objects</h3>
+    <div class="w3-code notranslate jsHigh" style="position: relative">
+      <span class="jscolor" style="color: black"
+        ><span class="jsnumbercolor" style="color: red"> </span
+        ><span class="commentcolor" style="color: green"
+          >// Prevents adding properties to an object<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black"
+          >preventExtensions</span
+        >(object)<br /><br /><span class="jsnumbercolor" style="color: red">
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Returns true if properties can be added to an object<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black"
+          >isExtensible</span
+        >(object)<br /><br /><span class="jsnumbercolor" style="color: red">
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Prevents changes of object properties (not values)<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black">seal</span
+        >(object)<br /><br /><span class="jsnumbercolor" style="color: red">
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Returns true if object is sealed<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black">isSealed</span
+        >(object)<br /><br /><span class="jsnumbercolor" style="color: red">
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Prevents any changes to an object<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black">freeze</span
+        >(object)<br /><br /><span class="jsnumbercolor" style="color: red">
+        </span
+        ><span class="commentcolor" style="color: green"
+          >// Returns true if object is frozen<br
+        /></span>
+        Object.<span class="jspropertycolor" style="color: black">isFrozen</span
+        >(object)<span class="jsnumbercolor" style="color: red"> </span>
+      </span>
+      <div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div>
+    </div>
     <p id="a1"></p>
     <script src="object2.js"></script>
   </body>
