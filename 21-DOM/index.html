@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .gfg {
+                color: green;
+                font-weight:bold;
+                font-size:50px;
+            }
+    </style>
+  </head>
+  <body onload="console.log('Welcome to my home page!');">
+    <h2>Finding HTML Elements</h2>
+    <table class="ws-table-all notranslate" border="1px solid grey">
+      <tbody>
+        <tr>
+          <th style="width: 50%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>document.getElementById(<em>id</em>)</td>
+          <td>Find an element by element id</td>
+        </tr>
+        <tr>
+          <td>document.getElementsByTagName(<em>name</em>)</td>
+          <td>Find elements by tag name</td>
+        </tr>
+        <tr>
+          <td>document.getElementsByClassName(<em>name</em>)</td>
+          <td>Find elements by class name</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Changing HTML Elements</h2>
+    <table class="ws-table-all notranslate" border="1px solid grey">
+      <tbody>
+        <tr>
+          <th style="width: 50%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><em>element</em>.innerHTML =&nbsp; <em>new html content</em></td>
+          <td>Change the inner HTML of an element</td>
+        </tr>
+        <tr>
+          <td><em>element</em>.<em>attribute = new value</em></td>
+          <td>Change the attribute value of an HTML element</td>
+        </tr>
+        <tr>
+          <td><em>element</em>.style.<em>property = new style</em></td>
+          <td>Change the style of an HTML element</td>
+        </tr>
+        <tr>
+          <th style="width: 50%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><em>element</em>.setAttribute<em>(attribute, value)</em></td>
+          <td>Change the attribute value of an HTML element</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Adding and Deleting Elements</h2>
+    <table class="ws-table-all notranslate" border="1px solid grey">
+      <tbody>
+        <tr>
+          <th style="width: 50%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>document.createElement(<em>element</em>)</td>
+          <td>Create an HTML element</td>
+        </tr>
+        <tr>
+          <td>document.removeChild(<em>element</em>)</td>
+          <td>Remove an HTML element</td>
+        </tr>
+        <tr>
+          <td>document.appendChild(<em>element</em>)</td>
+          <td>Add an HTML element</td>
+        </tr>
+        <tr>
+          <td>document.replaceChild(<em>new, old</em>)</td>
+          <td>Replace an HTML element</td>
+        </tr>
+        <tr>
+          <td>document.write(<em>text</em>)</td>
+          <td>Write into the HTML output stream</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Finding HTML Objects</h2>
+    <table class="ws-table-all notranslate" border="1px solid grey">
+      <tbody>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+          <th>DOM</th>
+        </tr>
+        <tr>
+          <td>document.anchors</td>
+          <td>Returns all &lt;a&gt; elements that have a name attribute</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.applets</td>
+          <td><span class="deprecated">Deprecated</span></td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.baseURI</td>
+          <td>Returns the absolute base URI of the document</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.body</td>
+          <td>Returns the &lt;body&gt; element</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.cookie</td>
+          <td>Returns the document's cookie</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.doctype</td>
+          <td>Returns the document's doctype</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.documentElement</td>
+          <td>Returns the &lt;html&gt; element</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.documentMode</td>
+          <td>Returns the mode used by the browser</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.documentURI</td>
+          <td>Returns the URI of the document</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.domain</td>
+          <td>Returns the domain name of the document server</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.domConfig</td>
+          <td><span class="deprecated">Obsolete.</span></td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.embeds</td>
+          <td>Returns all &lt;embed&gt; elements</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.forms</td>
+          <td>Returns all &lt;form&gt; elements</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.head</td>
+          <td>Returns the &lt;head&gt; element</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.images</td>
+          <td>Returns all &lt;img&gt; elements</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.implementation</td>
+          <td>Returns the DOM implementation</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.inputEncoding</td>
+          <td>Returns the document's encoding (character set)</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.lastModified</td>
+          <td>Returns the date and time the document was updated</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.links</td>
+          <td>
+            Returns all &lt;area&gt; and &lt;a&gt; elements that have a href
+            attribute
+          </td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.readyState</td>
+          <td>Returns the (loading) status of the document</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.referrer</td>
+          <td>Returns the URI of the referrer (the linking document)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.scripts</td>
+          <td>Returns all &lt;script&gt; elements</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.strictErrorChecking</td>
+          <td>Returns if error checking is enforced</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>document.title</td>
+          <td>Returns the &lt;title&gt; element</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>document.URL</td>
+          <td>Returns the complete URL of the document</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <hr />
+    <p id="p1">Finding HTML Elements by Id</p>
+    <p id="p2"></p>
+    <hr />
+    <p id="p3">Finding HTML Elements by Tag Name</p>
+    <p id="p4"></p>
+    <hr />
+    <div id="d1">
+      <p>Finding HTML Elements by Tag Name</p>
+      <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    </div>
+    <p id="p5"></p>
+    <hr />
+    <p class="c1">Hello World</p>
+    <p class="c1">Merhaba</p>
+    <p id="p6"></p>
+    <hr />
+    <p class="c2">Hello World</p>
+    <p class="c2">Merhaba</p>
+    <p id="p7"></p>
+    <hr />
+    <h1 id="h1">Old Heading</h1>
+    <hr />
+    <img
+      src="../img/balon.jpg"
+      alt="balon"
+      width="200px"
+      height="auto"
+      id="i1"
+    />
+    <hr />
+    <p id="p8"></p>
+    <hr />
+
+    <form name="form1" action="result.html" method="post" onsubmit="Form1()">
+      <label for="fname1">Name :</label>
+      <input type="text" name="fname1" id="fname1" />
+      <input type="submit" value="Submit" name="sub1" />
+    </form>
+    <hr />
+    <input id="i2" />
+    <button type="button" onclick="Form2()">Submit</button>
+
+    <p id="p9"></p>
+    <hr />
+    <p>Hello World</p>
+    <p id="p10">Hello World</p>
+    <hr />
+    <h1 id="h2">My Heading</h1>
+    <button type="button" onclick="fun1()">Click</button>
+    <hr />
+    <p id="p11">HELLO WORLD</p>
+    <input type="button" id="i3" value="Hide" onclick="fun2()" />
+    <input type="button" id="i4" value="Show" onclick="fun3()" />
+    <hr />
+    <h1 id="h3" onclick="func4()">Click on this text</h1>
+    <hr />
+    <h2 onclick="this.innerHTML = 'değiştirildi'">başlık</h2>
+    <hr />
+    <button type="button" id="b1">Try</button>
+    <p id="p12"></p>
+    <hr />
+    <input type="text" onchange="func6()" id="i5" />
+    <hr />
+    <div
+      onmouseover="func7(this)"
+      onmouseout="func8(this)"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Mouse over me
+    </div>
+    <hr />
+    <div
+      id="d33"
+      onmouseover="func9()"
+      onmouseout="func10()"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Mouse over me
+    </div>
+    <hr />
+    <div
+      onmousedown="func11(this)"
+      onmouseup="func12(this)"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Mouse over me
+    </div>
+    <hr />
+    <img
+      src="../img/balon.jpg"
+      alt="balon"
+      id="img5"
+      onmousedown="func13()"
+      onmouseup="func14()"
+      width="190"
+      height="150"
+    />
+    <hr />
+    <label for="i6">Enter</label>
+    <input type="text" name="i6" id="i6" onfocus="func15(this)" />
+    <hr />
+    <h1 onmouseover="style.color='red'" onmouseout="style.color='blue'">
+      Mouse over
+    </h1>
+    <hr />
+    <p id="p13"></p>
+    <button id="b2">Try</button>
+    <hr />
+    <button id="b3">Alert</button>
+    <hr />
+    <button id="b4">Double Alert</button>
+    <hr />
+    <button id="b6">Trible Event</button>
+    <p id="p15"></p>
+    <hr />
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+    <hr />
+    <p id="p16"></p>
+    <hr />
+    <div
+      id="d5"
+      style="
+        background-color: coral;
+        border: 1px solid black;
+        padding: 50px;
+        color: white;
+        font-size: 20px;
+        width: 300px;
+        height: 200px;
+        margin: auto;
+      "
+    >
+      <button id="b7" onclick="">Remove</button>
+    </div>
+    <p id="p17"></p>
+    <hr />
+    <p id="p18">First Paragraph</p>
+    <p id="p19"></p>
+    <hr />
+    <p id="p20">Second Paragraph</p>
+    <p id="p21"></p>
+    <hr />
+    <p id="p22">Third Paragraph</p>
+    <p id="p23"></p>
+    <hr />
+    <p id="p24"></p>
+    <hr />
+    <div id="d55">
+      <p id="p25">First paragraph</p>
+      <p id="p26">Second paragraph</p>
+    </div>
+    <hr />
+    <div id="d6">
+      <p id="p27">First paragraph</p>
+      <p id="p28">Second paragraph</p>
+    </div>
+    <hr />
+    <div id="d7">
+      <p id="p29">First paragraph</p>
+      <p id="p30">Second paragraph</p>
+      <button onclick="func24()">Remove</button>
+    </div>
+    <hr />
+    <div id="d8">
+      <p id="p31">First paragraph</p>
+      <p id="p32">Second paragraph</p>
+      <button onclick="func25()">Remove</button>
+    </div>
+    <hr />
+    <div id="d9">
+      <p id="p33">First paragraph</p>
+      <p id="p34">Second paragraph</p>
+      <button onclick="func26()">Replace</button>
+    </div>
+    <hr />
+    <h1>JavaScript HTML DOM</h1>
+    <p id="p35">Hello World!</p>
+    <p id="p36">Hello Norway!</p>
+    <p id="p37"></p>
+    <hr />
+    <p id="p38"></p>
+    <hr />
+    <button onclick="func27()">Color Changed</button>
+    <hr />
+    <p id="p39"></p>
+    <hr />
+    <p id="p40"></p>
+    <hr />
+    <p id="p41"></p>
+    <hr />
+    <p id="p42"></p>
+    <button onclick="func28()">change color</button>
+    <hr />
+    <div>
+      <form>
+        <p>
+          <b><code>text</code></b>
+        </p>
+        <select
+          onChange="setBodyAttr('text',
+          this.options[this.selectedIndex].value);"
+        >
+          <option value="black">black</option>
+          <option value="red">red</option>
+        </select>
+        <p>
+          <b><code>bgColor</code></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
+          this.options[this.selectedIndex].value);"
+        >
+          <option value="white">white</option>
+          <option value="lightgrey">gray</option>
+        </select>
+        <p>
+          <b><code>link</code></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
+          this.options[this.selectedIndex].value);"
+        >
+          <option value="blue">blue</option>
+          <option value="green">green</option>
+        </select>
+        <small>
+          <a href="http://some.website.tld/page.html" id="sample">
+            (sample link)
+          </a>
+        </small>
+      </form>
+    </div>
+    <hr />
+    <h1>GeeksForGeeks</h1>
+    <h2>DOM close() Method</h2>
+    <button onclick="geeks1()">Submit</button>
+    <hr>
+    <h1>GeeksforGeeks</h1>
+    <h2>DOM baseURI Property</h2>
+    </h2>
+    <button onclick = "geeks2()">Submit</button>
+    <p id="gfg"></p>
+    <hr>
+    <!-- DOM createAttribute() Method -->
+    <h1>GeeksforGeeks</h1>
+    <h2>DOM createAttribute() Method</h2>
+    <button onclick="geeks3()">Submit</button>
+    <hr>
+    <h2>DOM createAttribute() Method</h2>
+    <a id="gfg1">Visit GeeksForGeeks...</a><br><br>
+    <button onclick="geeks4()">Submit</button>
+    <script src="dom.js"></script>
+  </body>
+</html>
