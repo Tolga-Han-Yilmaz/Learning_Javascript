@@ -52,3 +52,50 @@ function Form2() {
     text = `Input : ${e9}`;
   }
   document.getElementById("p9").innerHTML = text;
+
+  // Changing HTML Style
+// document.getElementById(id).style.property = new style
+document.getElementById("p10").style.color = "blue";
+document.getElementById("p10").style.fontSize = "larger";
+
+// Using Events
+function fun1() {
+  document.getElementById("h2").style.color = "red";
+}
+
+function fun2() {
+  document.getElementById("p11").style.visibility = "hidden";
+}
+function fun3() {
+  document.getElementById("p11").style.visibility = "visible";
+}
+
+// Reacting to Events
+function func4() {
+  document.getElementById("h3").innerHTML = "Changed";
+}
+
+// Assign Events Using the HTML DOM
+document.getElementById("b1").onclick = func5;
+function func5() {
+  document.getElementById("p12").innerHTML = "Hello World";
+}
+
+// The onchange Event
+function func6() {
+  const x = document.getElementById("i5");
+  x.value = x.value.toUpperCase();
+}
+
+// The onmouseover and onmouseout Events
+function func7(obj) {
+  obj.innerHTML = "Thank You";
+}
+function func8(obj) {
+  obj.innerHTML = "Mouse Over Me";
+}
+function func9() {
+  document.getElementById("d33").innerHTML = "Thank You";
+}
+function func10() {
+  document.getElementById("d33").innerHTML = "Mouse Over Me";
