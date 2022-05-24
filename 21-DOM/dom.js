@@ -99,3 +99,22 @@ function func9() {
 }
 function func10() {
   document.getElementById("d33").innerHTML = "Mouse Over Me";
+}
+
+  // The onmousedown, onmouseup and onclick Events
+function func11(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+  obj.style.fontSize = "larger";
+}
+function func12(obj) {
+  obj.style.backgroundColor = "yellow";
+  obj.innerHTML = "Thank You";
+}
+
+function func13() {
+  document.getElementById("img5").src = "../img/fener.jpg";
+}
+function func14() {
+  document.getElementById("img5").src = "../img/balon.jpg";
+}
