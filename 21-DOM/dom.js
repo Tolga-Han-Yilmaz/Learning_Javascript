@@ -52,8 +52,9 @@ function Form2() {
     text = `Input : ${e9}`;
   }
   document.getElementById("p9").innerHTML = text;
+}
 
-  // Changing HTML Style
+// Changing HTML Style
 // document.getElementById(id).style.property = new style
 document.getElementById("p10").style.color = "blue";
 document.getElementById("p10").style.fontSize = "larger";
@@ -101,7 +102,7 @@ function func10() {
   document.getElementById("d33").innerHTML = "Mouse Over Me";
 }
 
-  // The onmousedown, onmouseup and onclick Events
+// The onmousedown, onmouseup and onclick Events
 function func11(obj) {
   obj.style.backgroundColor = "#1ec5e5";
   obj.innerHTML = "Release Me";
@@ -117,4 +118,115 @@ function func13() {
 }
 function func14() {
   document.getElementById("img5").src = "../img/balon.jpg";
+}
+
+// onfocus
+function func15(a) {
+  a.style.background = "yellow";
+}
+
+// addEventListener
+document.getElementById("b2").addEventListener("click", func17);
+function func17() {
+  document.getElementById("p13").innerHTML = Date();
+}
+
+document.getElementById("b3").addEventListener("click", function () {
+  alert("Hello World");
+});
+
+var x = document.getElementById("b4");
+x.addEventListener("click", func18);
+x.addEventListener("click", func19);
+function func18() {
+  alert("Hello");
+}
+function func19() {
+  alert("World");
+}
+
+var xx = document.getElementById("b6");
+xx.addEventListener("mouseover", func20);
+xx.addEventListener("mouseout", func21);
+xx.addEventListener("click", func22);
+function func20() {
+  document.getElementById("p15").innerHTML += "Mouse Over <br/>";
+}
+function func21() {
+  document.getElementById("p15").innerHTML += "Mouse Out <br/>";
+}
+function func22() {
+  document.getElementById("p15").innerHTML += "Clicked <br/>";
+}
+
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>";
+}
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
+
+// Add an Event Handler to the window Object
+window.addEventListener("resize", function () {
+  document.getElementById("p16").innerHTML = Math.random();
+});
+
+// The removeEventListener() method
+document.getElementById("d5").addEventListener("mousemove", func23);
+function func23() {
+  document.getElementById("p17").innerHTML = Math.random();
+}
+// Child Nodes and Node Values
+document.getElementById("p19").innerHTML =
+  document.getElementById("p18").innerHTML;
+
+document.getElementById("p21").innerHTML =
+  document.getElementById("p20").firstChild.nodeValue;
+
+document.getElementById("p23").innerHTML =
+  document.getElementById("p22").childNodes[0].nodeValue;
+
+console.log(document.body);
+console.log(document.documentElement);
+
+// The nodeName
+document.getElementById("p24").innerHTML =
+  document.getElementById("b7").nodeName; // BUTTON
+
+// The nodeType
+console.log(document.getElementById("b7").nodeType); // 1
+console.log(document.getElementById("p18").nodeType); // 1
+
+// Creating New HTML Elements (Nodes)
+const par1 = document.createElement("p");
+const par2 = document.createTextNode("Last paragraph");
+par1.appendChild(par2);
+const par3 = document.getElementById("d55");
+par3.appendChild(par1);
+
+const par4 = document.createElement("h1");
+const par5 = document.createTextNode("JS Title");
+par4.appendChild(par5);
+const par6 = document.getElementById("d6");
+const par7 = document.getElementById("p27");
+par6.insertBefore(par4, par7);
+
+// Removing Existing HTML Elements
+function func24() {
+  document.getElementById("p30").remove();
+}
+
+const parent = document.getElementById("d8");
+const child = document.getElementById("p32");
+function func25() {
+  parent.removeChild(child);
+  // child.remove();
+  // document.getElementById("p32").remove();
 }
