@@ -230,3 +230,90 @@ function func25() {
   // child.remove();
   // document.getElementById("p32").remove();
 }
+
+// Replacing HTML Elements
+const parent1 = document.getElementById("d9");
+const child1 = document.getElementById("p33");
+const par8 = document.createElement("h3");
+const par9 = document.createTextNode("Have been Title");
+par8.appendChild(par9);
+function func26() {
+  parent1.replaceChild(par8, child1);
+}
+
+// The HTMLCollection Object
+const myCollection = document.getElementsByTagName("p");
+document.getElementById("p37").innerHTML =
+  "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;
+
+// HTML HTMLCollection Length
+const myCollection1 = document.getElementsByTagName("p");
+document.getElementById("p38").innerHTML =
+  "This document contains " + myCollection1.length + " paragraphs.";
+
+function func27() {
+  const myCollection2 = document.getElementsByTagName("h1");
+  for (let i = 0; i < myCollection2.length; i++) {
+    myCollection2[i].style.color = "red";
+  }
+}
+// function func27() {
+//   const myCollection3 = document.getElementsByTagName("h1");
+//   myCollection3.style.color = "red";
+// } --> böyle yapınca olmadı. çünkü elemanları tek tek dolaşmak lazım
+const myCollection4 = document.getElementsByTagName("h1");
+console.log(myCollection4); // HTMLCollection(6) [h1#h1, h1#h2, h1#h3, h1, h1, h1, h1: h1#h1, h2: h1#h2, h3: h1#h3]
+
+// The HTML DOM NodeList Object
+const myNodelist = document.querySelectorAll("p");
+document.getElementById("p39").innerHTML =
+  "The innerHTML of the paragraph is : " + myNodelist[3].innerHTML;
+
+// querySelectorAll
+const myNodelist1 = document.querySelectorAll("p");
+document.getElementById("p40").innerHTML =
+  "The innerHTML of the paragraph is : " + myNodelist1[8].innerHTML;
+
+const myNodelist2 = document.querySelectorAll("p");
+
+document.getElementById("p41").innerHTML =
+  "This document contains " + myNodelist2.length + " paragraphs.";
+
+function func28() {
+  const myNodelist3 = document.querySelectorAll("p");
+  for (let i = 0; i < myNodelist3.length; i++) {
+    myNodelist3[i].style.color = "red";
+  }
+}
+
+function setBodyAttr(attr, value) {
+  if (document.body) document.body[attr] = value;
+  else throw new Error("no support");
+}
+
+// yeni bir pencere açıyor.
+function geeks1() {
+  var gfg = window.open();
+  gfg.document.open();
+  gfg.document.write("<h1>PRACTICE</h1>");
+  gfg.document.close();
+}
+
+function geeks2() {
+  var x = document.baseURI;
+  document.getElementById("gfg").innerHTML = "The base URI of the page: " + x;
+}
+
+// DOM createAttribute() Method
+function geeks3() {
+  var tag_name = document.getElementsByTagName("h1")[8];
+  var attr = document.createAttribute("class");
+  attr.value = "gfg";
+  tag_name.setAttributeNode(attr);
+}
+function geeks4() {
+  var id = document.getElementById("gfg1");
+  var new_attr = document.createAttribute("href");
+  new_attr.value = "#";
+  id.setAttributeNode(new_attr);
+}
